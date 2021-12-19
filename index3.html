@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhapso" placeholder="Nhập mảng vào đây: ">
+<button onclick="kiemtra()">Kiểm tra</button>
+<script>
+    function kiemtra(){
+        let mang=document.getElementById("nhapso").value;
+        let arr=mang.split(',');
+        let soV=prompt("Nhập số V: ");
+        let count=0;
+        let index=-1;
+        for (i=0;i<arr.length;i++){
+            if (arr[i]===soV){
+                count++;
+                index=i;
+            }
+        }if (count===0){
+            document.write("số V không có trong mảng");
+        }else{
+            document.write("số V có ở trong mảng và xuất hiện "+count+" lần");
+        }
+    }
+</script>
+</body>
+</html>
