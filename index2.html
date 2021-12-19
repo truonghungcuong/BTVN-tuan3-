@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhapso" placeholder="Nhập mảng vào đây: ">
+<button onclick="kiemtra()">Kiểm tra</button>
+<script>
+  function kiemtra(){
+    let mang=document.getElementById("nhapso").value;
+    let arr=mang.split(',');
+    let tich=1;
+    for (i=1;i<arr.length;i++){
+      tich*=parseInt(arr[i]);
+    }
+    document.write("tích các phần tử trong mảng là: "+tich);
+  }
+</script>
+</body>
+</html>
